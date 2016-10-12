@@ -1,0 +1,43 @@
+<ion-view>
+  <ion-content>
+    <div>
+      <img ng-src="assets/images/logo.jpg" style='width:100%;height:100%' border="0"/>
+    </div>
+    <div class="page-background">
+      <div class="login-card">
+        <h3>Register an account</h3>
+
+        <div class="padding">
+          <label ng-show="showErrormsg" class="assertive"> Invalid Credentials !!</label>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input placeholder="First Name" type="text" ng-model="user.firstName">
+          </label>
+          <label class="item item-input">
+            <input placeholder="Last Name" type="text" ng-model="user.lastName">
+          </label>
+          <label class="item item-input">
+            <input type="text"  ng-model="user.emailId" placeholder="Email ID">
+          </label>
+          <label class="item item-input">
+            <input  type="password" ng-model="user.password" placeholder="Password">
+          </label>
+          <label class="item item-input">
+            <input placeholder="Confirm Password" type="password" ng-model="user.confirmPassword">
+          </label>
+          <label class="item item-input">
+            <input placeholder="Pin Code" type="tel" ng-model="user.pincode">
+          </label>
+        </div>
+        <button class="button button-block button-positive"ng-click="signUp(user)">
+          Register
+        </button>
+        <p class="text-center">
+          <a href ng-click="signInPage(user)">Have an Account? Click Here to Sign In</a>
+        </p>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

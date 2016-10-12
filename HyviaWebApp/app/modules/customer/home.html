@@ -1,0 +1,13 @@
+<div class="page-background">
+  <div class="login-card">
+    <h1>Hyvia</h1>
+    <button class="login login-submit" ng-click="getProductTypes('a')">
+      Product Search
+    </button>
+    <div class="button-bar-inline">
+      <li ng-repeat="eachProduct in productType track by $index" style="list-style: none">
+        <button ng-click="gotoProductDetailsPage(eachProduct.ProductTypeId)">{{eachProduct.productTypeName}}</button>
+      </li>
+    </div>
+  </div>
+</div>

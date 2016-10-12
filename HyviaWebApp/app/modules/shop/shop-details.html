@@ -1,0 +1,121 @@
+<header>
+
+  <h2>Shop & Product Details</h2>
+</header>
+
+  <div id="map"  map-marker-data = "markerData" style="height: 200px;" google-map data-tap-disabled="true" draggable="true"></div>
+  <!--///////////////// TEXT FIELDS ///////////////////-->
+  <div class="field-group">
+    <label for="text1" class="labelfield">Shop Name:</label>
+    <div class="field">
+      <input name="text1" id="text1"  type="text"  value=""   required ng-model="shopDetails.shopCommand.shopName">
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="email1" class="labelfield">Email:</label>
+    <div class="field">
+      <input name="email1" id="email1" type="email" spellcheck="false"  value=""  required ng-model="shopDetails.shopCommand.emailAddress">
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="text1" class="labelfield">state:</label>
+    <div class="field">
+      <input name="text1"  type="text"  value=""  required ng-model="shopDetails.shopCommand.address">
+    </div>
+  </div>
+  <div class="field-group">
+    <label class="labelfield">Pincode:</label>
+    <div class="field">
+      <input  value="" type="text" ng-model="shopDetails.shopCommand.pincode">
+    </div>
+  </div>
+  <div class="field-group">
+    <label for="text1" class="labelfield">Phone No:</label>
+    <div class="field">
+      <input name="text1"  type="text"  value=""  required ng-model="shopDetails.shopCommand.shopPhoneNo">
+    </div>
+  </div>
+  <div class="field-group">
+    <label for="text1" class="labelfield">Mobile No:</label>
+    <div class="field">
+      <input name="text1"  type="text"  value=""  required ng-model="shopDetails.shopCommand.shopMobileNo">
+    </div>
+  </div>
+<div class="field-group">
+  <label for="text1" class="labelfield">Owner Phone No:</label>
+  <div class="field">
+    <input name="text1"  type="text"  value=""  required ng-model="shopDetails.shopCommand.shopOwnerPhoneNo">
+  </div>
+</div>
+<div class="field-group">
+  <label for="text1" class="labelfield">Owner Mobile No:</label>
+  <div class="field">
+    <input name="text1"  type="text"  value=""  required ng-model="shopDetails.shopCommand.shopOwnerMobileNo">
+  </div>
+</div>
+  <div class="field-group">
+    <label for="url1" class="labelfield">Shop URL:</label>
+    <div class="field">
+      <input name="url1" id="url1" type="url" value="" ng-model="shopDetails.shopCommand.shopWebsiteURL">
+    </div>
+  </div>
+ <!-- <div class="field-group">
+    <div class="labelfield">Shop Category:</div>
+    <div class="field">
+      <select ng-model="shopDetails.shopCommand.ProductTypeId">
+        <option ng-repeat="option in shopDetails.productTypes" value="{{option.productTypeId}}">{{option.productTypeName}}</option>
+      </select>
+    </div>
+  </div>-->
+  <div class="field-group">
+    <label  class="labelfield">Activation Status:</label>
+    <div class="field">
+      <input type="checkbox" name="vehicle" value="Bike" ng-model="shopDetails.shopCommand.activationStatus">
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label class="labelfield">Registration Date:</label>
+    <div class="field">
+      <input  type="date" ng-model="shopDetails.shopCommand.registrationDate">
+    </div>
+  </div>
+
+<!--  &lt;!&ndash;///////////////// TEXTAREA ///////////////////&ndash;&gt;
+  <div class="field-group">
+    <label for="textarea1" class="labelfield">Description:</label>
+    <div class="field">
+      <textarea id="textarea1" name="textarea1" spellcheck="true" rows="10" cols="50" ></textarea>
+    </div>
+  </div>-->
+
+<!--///////////////// SUBMIT BUTTON ///////////////////-->
+<div class="field-group">
+  <div class="field">
+    <input  type="button" value = "save" ng-click="saveShopDetails();">
+  </div>
+</div>
+
+
+<div ng-if="shopDetails.shopCommand.shopId">
+  <table  class="table">
+    <th>Product Name</th>
+    <tr ng-repeat="product in tableParams">
+      <td title="'product Name'" filter="{ name: 'text'}" sortable="'productName'">
+        <a href="#/product-details?productId={{product.productId}}&shopId={{shopDetails.shopCommand.shopId}}"> {{product.productName}}</a></td>
+     <!-- <td title="'Address'" filter="{ age: 'number'}" sortable="'address'">
+        {{shop.address}}</td>-->
+    </tr>
+  </table>
+
+  <div>
+    <input  type="button"  value = "Add New Product" ng-click="addProductDetails();">
+  </div>
+  <br>
+
+
+
+
+

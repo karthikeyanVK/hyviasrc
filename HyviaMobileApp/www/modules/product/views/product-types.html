@@ -1,0 +1,224 @@
+<!--<ion-view view-title="Product Types">-->
+  <ion-view>
+  <ion-content padding="true">
+    <!-- header -->
+    <div class="menu-bar">
+      <div class="row">
+        <div class="small-3 columns">
+          <div class="row">
+            <div class="small-6 columns">
+                <span id="category-menu">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</span>
+            </div>
+            <div class="small-6 columns">
+              <a href="shop.html"><img src="assets/images/logo.png" alt="logo"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="small-1 columns">&nbsp;</div>
+        <div class="small-6 columns">
+          <form id="search-form" action="search_page.html">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" name="search" placeholder="Search"/>
+          </form>
+        </div>
+        <div class="small-1 columns">&nbsp;</div>
+        <div class="small-1 columns text-center">
+          <a href="about-us.html"><i class=" fa fa-ellipsis-v  m-t5"></i></a>
+        </div>
+        <!--div class="small-3 columns">
+                <select>
+                    <option value="">About Us</option>
+                    <option value="">Wish List</option>
+                    <option value="">Help Center</option>
+                    <option value="">Rate the app</option>
+                </select>
+            </div-->
+      </div>
+    </div>
+    <!-- category menu -->
+    <div id="category_menu">
+      <ul class="main-nav">
+        <li><a href="#">Fashion & Accessories </a>
+          <ul class="sub-nav">
+            <li><a href="#">Men<i class=" fa fa-chevron-right  right"></i>
+              <i class="fa fa-chevron-down right" aria-hidden="true"></i></a>
+              <ul class="sub-nav1">
+                <li><a href="#">Shirt</a></li>
+                <li><a href="#">Tshirt</a></li>
+              </ul>
+
+
+            </li>
+            <li><a href="#">Women<i class=" fa fa-chevron-right  right"></i>
+              <i class="fa fa-chevron-down right" aria-hidden="true"></i></a>
+              <ul class="sub-nav1">
+                <li><a href="#">Sarees</a></li>
+                <li><a href="#">Skirts</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Kids<i class=" fa fa-chevron-right  right"></i>
+              <i class="fa fa-chevron-down right" aria-hidden="true"></i></a>
+              <ul class="sub-nav1">
+                <li><a href="#">Baby Clothing</a></li>
+                <li><a href="#">Tshirt</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Electronics</a>
+          <ul class="sub-nav">
+            <li><a href="#">Mobile<i class=" fa fa-chevron-right  right"></i>
+              <i class="fa fa-chevron-down right" aria-hidden="true"></i></a>
+              <ul class="sub-nav1">
+                <li><a href="#">Samsung</a></li>
+                <li><a href="#">Sony</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Laptop<i class=" fa fa-chevron-right  right"></i>
+              <i class="fa fa-chevron-down right" aria-hidden="true"></i></a>
+              <ul class="sub-nav1">
+                <li><a href="#">Pen Drives</a></li>
+                <li><a href="#">Hard Drives</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- search -->
+    <div id="content-area" class="search-page">
+
+      <div class="search-advance-search">
+        <form id="search-page-form" action="#">
+
+          <div class="row">
+
+            <div class="small-7 columns">
+
+              <div data-target="#value1" class="ui-slider">
+
+              </div>
+              <p class="ranger-value">Value: <b id="value1" class="value">7</b></p>
+              <div class="range-slider-outer">
+                <div class="range-slider">
+                  <input type="hidden" class="slider-input" value="23" />
+                </div>
+
+              </div>
+
+            </div>
+            <div class="small-5 columns">
+              <label class="switch">
+                <input type="checkbox" checked="checked">
+                <div class="slider round "></div>
+              </label>
+              <i class="fa fa-refresh" aria-hidden="true"></i>
+
+
+            </div>
+
+          </div>
+          <div class="row">
+
+            <div class="small-12 columns">
+              <p class="adv-search">Advance search <i class="fa fa-angle-down" aria-hidden="true"></i></p>
+            </div>
+          </div>
+
+          <div class="advance-search">
+            <div class="row m-t10">
+
+              <div class="small-2 columns">
+
+                <p>Sort by</p>
+
+              </div>
+
+              <div class="small-10 columns">
+
+                <div class="sort">
+                  <span><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i> A-Z</a></span>
+                  <span><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i> Popularity</a></span>
+                  <span><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i> Offer</a></span>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="search-list">
+
+        <div class="search-product-list" ng-repeat="eachProduct in productType track by $index"  class="item"
+             ng-click="gotoProductDetailsPage(eachProduct.productTypeId)">
+          <div class="row">
+
+
+            <div class="small-12 columns">
+
+
+              <div class="search-product-list-inner">
+                <div class="row">
+                  <div class="small-4 columns">
+                    <a href="#"><img src="assets/images/search.jpg" alt="customer"/></a>
+                  </div>
+
+                  <div class="small-8 columns">
+                    <div class="desc">
+                      <h4>{{eachProduct.productTypeName}}</h4>
+                      <p>{{eachProduct.productTypeName}}</p>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="view-more">
+              <a href="javascript:void(0)">View More</a>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="search-map">
+        <div class="row m-t20">
+          <div class="small-12 columns">
+            <div id="search-map-page">
+              <div id="map_canvas" class="mapping"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- help -->
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="help">
+            <a href="help_page.html">Help</a>
+            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+
+    </div><!--content-area -->
+  </ion-content>
+</ion-view>

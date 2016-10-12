@@ -1,0 +1,28 @@
+{
+  "generator-angularjs-gulp-library": {
+    "props": {
+      "author": {
+        "name": "karthikeyanvk",
+        "email": "karthik_3030@yahoo.com"
+      },
+      "libraryName": {
+        "original": "HyviaUIEssential",
+        "camelized": "hyviaUiessential",
+        "dasherized": "-hyvia-u-i-essential",
+        "slugified": "hyviauiessential",
+        "parts": [
+          "hyviauiessential"
+        ]
+      },
+      "includeModuleDirectives": false,
+      "includeModuleFilters": false,
+      "includeModuleServices": true,
+      "includeAngularModuleResource": false,
+      "includeAngularModuleCookies": false,
+      "includeAngularModuleSanitize": false,
+      "librarySrcDirectory": "src/hyviaUiessential",
+      "libraryUnitTestDirectory": "test/unit/hyviaUiessential",
+      "libraryUnitE2eDirectory": "test/e2e/hyviaUiessential"
+    }
+  }
+}

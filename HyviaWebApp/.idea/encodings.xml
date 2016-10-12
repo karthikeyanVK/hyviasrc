@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../hyviamobile/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hyviamobile/www/modules/login/_login.app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../hyviamobile/www/modules/login/views/sign-in.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gruntfile.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/customer/home.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/customer/product-details.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/customer/productServices.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/login/AuthenticationServices.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/login/sign-in.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/login/sign-up.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/login/signinCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/product/_product.app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/services/webApiService.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/sample.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/customer/productDetailsSearchCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/customer/productServices.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/customer/productTypeSearchCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/login/AuthenticationServices.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/login/registerCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/login/signinCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/scripts/controllers/product/_product.app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/stylesheet.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swagger/spec.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/spec/controllers/about.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/spec/controllers/main.js" charset="UTF-8" />
+  </component>
+</project>

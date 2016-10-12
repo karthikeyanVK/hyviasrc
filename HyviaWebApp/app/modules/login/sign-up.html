@@ -1,0 +1,70 @@
+<!--<div style="width: 450px">
+  <div class="padding">
+    <p><img src="http://www.oopsla.org/oopsla2008_final/images/icons/2008_logo-small.gif" style="padding-left: 80%"></p>
+  </div>
+  <div class="padding">
+    <button class="button button-light" ng-click="signIn(user)">
+      Sign In
+    </button>
+    <button class="button button-stable" ng-click="signUp(user)">
+      Sign Up
+    </button>
+  </div>
+  <div class="padding">
+    <label ng-show="showErrormsg" class="assertive"> Invalid Credentials !!</label>
+  </div>
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input placeholder="First Name" type="text" ng-model="user.firstName">
+    </label>
+    <br>
+    <label class="item item-input">
+      <input placeholder="Last Name" type="text" ng-model="user.lastName">
+    </label>
+    <br>
+    <label class="item item-input">
+      <input placeholder="Email ID" type="email" ng-model="user.emailId">
+    </label>
+    <br>
+    <label class="item item-input">
+      <input placeholder="Password" type="password" ng-model="user.password">
+    </label>
+    <br>
+    <label class="item item-input">
+      <input placeholder="Confirm Password" type="password" ng-model="user.confirmPassword">
+    </label>
+    <br>
+    <label class="item item-input">
+      <input placeholder="Pin Code" type="tel" ng-model="user.pincode">
+    </label>
+
+  </div>
+  <div class="padding">
+
+    <p class="text-center">
+      <a href="#/forgot-password">Forgot password</a>
+    </p>
+  </div>
+</div>-->
+
+<div class="page-background">
+  <div class="login-card">
+    <h1>Hyvia</h1>
+
+    <div class="padding">
+      <label ng-show="showErrormsg" class="assertive"> Invalid Credentials !!</label>
+    </div>
+    <input placeholder="First Name" type="text" ng-model="user.firstName">
+    <input placeholder="Last Name" type="text" ng-model="user.lastName">
+    <input type="text"  ng-model="user.emailId" placeholder="Email ID">
+    <input  type="password" ng-model="user.password" placeholder="Password">
+    <input placeholder="Confirm Password" type="password" ng-model="user.confirmPassword">
+    <input placeholder="Pin Code" type="tel" ng-model="user.pincode">
+
+    <button class="login login-submit" ng-click="signUp(user)">
+      Register
+    </button>
+
+
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="page-background">
+  <div class="login-card">
+    <h1>Hyvia</h1>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="productName" ng-change="getProductDetails(productName)">
+      </label>
+    </div>
+    <div class="button-bar-inline">
+      <li ng-repeat="eachProduct in productDetails track by $index" style="list-style: none">
+        <button ng-click="getProductDetails(eachProduct)">{{eachProduct.productName}}</button>
+      </li>
+    </div>
+  </div>
+</div>

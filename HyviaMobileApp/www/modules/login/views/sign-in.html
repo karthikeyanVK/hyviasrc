@@ -1,0 +1,309 @@
+<ion-view>
+  <ion-content>
+    <div class="wrapper">
+
+      <!-- app logo -->
+      <div class="logo">
+        <div class="row">
+          <div class="small-12 columns">
+            <a href="#"><img src="assets/images/logo-new2.png" alt="logo"/></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- sign in -->
+      <div class="signin">
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="sign-in" ng-class="{ 'active': signInTabShow }">
+              <h4><a href ng-click="showSignIn()">Sign in</a></h4>
+            </div>
+            <div class="sign-up" ng-class="{ 'active': signUpTabShow }">
+              <h4><a href ng-click="showSignUp()">Sign up</a></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- log in account -->
+      <div ng-show="signInTabShow" class="log-in login-account" ng-class="{ 'active': signInTabShow }">
+        <div class="row">
+          <div class="small-12 columns">
+            <h2>Log in to your account</h2>
+
+
+            <p>
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <input type="email" name="email" placeholder="Email Id" class="email-id" ng-model="user.emailId"/>
+            </p>
+
+            <p><i class="fa fa-lock" aria-hidden="true"></i>
+              <input type="password" name="password" placeholder="Password" class="password" ng-model="user.password"/>
+
+            </p>
+
+            <div class="inner-from">
+              <input type="button" name="log-in" placeholder="Log In" class="log-in-btn" value="Log In"
+                     ng-click="signIn(user)"/>
+            </div>
+
+            <div class="loading">
+              <img class="loading-image" src="assets/images/loading.gif" alt="Loading..."/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sign up account -->
+      <div class="log-in login-account" ng-hide="signInTabShow" ng-class="{ active: signUpTabShow }">
+        <div class="row" ng-controller="RegisterCtrl">
+          <div class="small-12 columns">
+            <h2>Sign up to your account</h2>
+
+            <div class="padding">
+              <label ng-show="showErrormsg" class="assertive"> Invalid Credentials !!</label>
+            </div>
+            <p>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input type="text" name="username" placeholder="First Name" class="username" ng-model="user.firstName"/>
+            </p>
+            <p>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input type="text" name="username"  ng-model="user.lastName" placeholder="Last Name" class="username"/>
+            </p>
+            <p><i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <input type="email" name="email" ng-model="user.emailId" placeholder="Email Id" class="email-id"/>
+
+            </p>
+
+
+            <p><i class="fa fa-lock" aria-hidden="true"></i>
+              <input type="password" name="password" placeholder="Password"  ng-model="user.password" class="password"/>
+
+            </p>
+            <p><i class="fa fa-lock" aria-hidden="true"></i>
+              <input type="password" name="password" placeholder="Confirm Password"  ng-model="user.confirmPassword" class="password"/>
+
+            </p>
+            <p><i class="fa fa-lock" aria-hidden="true"></i>
+              <input type="tel" ng-model="user.pincode"  placeholder="Pincode"  ng-model="user.confirmPassword" class="password"/>
+
+            </p>
+
+
+<!--            <p><label>Birthday</label>
+              <select>
+                <option disabled selected hidden>Date</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+              </select>
+
+              <select>
+                <option disabled selected hidden>Month</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+
+
+              <select>
+                <option disabled selected hidden>Year</option>
+                <option>1900</option>
+                <option>1901</option>
+                <option>1902</option>
+                <option>1903</option>
+                <option>1904</option>
+                <option>1905</option>
+                <option>1906</option>
+                <option>1907</option>
+                <option>1908</option>
+                <option>1909</option>
+                <option>1910</option>
+                <option>1911</option>
+                <option>1912</option>
+                <option>1913</option>
+                <option>1914</option>
+                <option>1915</option>
+                <option>1916</option>
+                <option>1917</option>
+                <option>1918</option>
+                <option>1919</option>
+                <option>1920</option>
+                <option>1921</option>
+                <option>1922</option>
+                <option>1923</option>
+                <option>1924</option>
+                <option>1925</option>
+                <option>1926</option>
+                <option>1927</option>
+                <option>1928</option>
+                <option>1929</option>
+                <option>1930</option>
+                <option>1931</option>
+                <option>1932</option>
+                <option>1933</option>
+                <option>1934</option>
+                <option>1935</option>
+                <option>1936</option>
+                <option>1937</option>
+                <option>1938</option>
+                <option>1939</option>
+                <option>1940</option>
+                <option>1941</option>
+                <option>1942</option>
+                <option>1943</option>
+                <option>1944</option>
+                <option>1945</option>
+                <option>1946</option>
+                <option>1947</option>
+                <option>1948</option>
+                <option>1949</option>
+                <option>1950</option>
+                <option>1951</option>
+                <option>1952</option>
+                <option>1953</option>
+                <option>1954</option>
+                <option>1955</option>
+                <option>1956</option>
+                <option>1957</option>
+                <option>1958</option>
+                <option>1959</option>
+                <option>1960</option>
+                <option>1961</option>
+                <option>1962</option>
+                <option>1963</option>
+                <option>1964</option>
+                <option>1965</option>
+                <option>1966</option>
+                <option>1967</option>
+                <option>1968</option>
+                <option>1969</option>
+                <option>1970</option>
+                <option>1971</option>
+                <option>1972</option>
+                <option>1973</option>
+                <option>1974</option>
+                <option>1975</option>
+                <option>1976</option>
+                <option>1977</option>
+                <option>1978</option>
+                <option>1979</option>
+                <option>1980</option>
+                <option>1981</option>
+                <option>1982</option>
+                <option>1983</option>
+                <option>1984</option>
+                <option>1985</option>
+                <option>1986</option>
+                <option>1987</option>
+                <option>1988</option>
+                <option>1989</option>
+                <option>1990</option>
+                <option>1991</option>
+                <option>1992</option>
+                <option>1993</option>
+                <option>1994</option>
+                <option>1995</option>
+                <option>1996</option>
+                <option>1997</option>
+                <option>1998</option>
+                <option>1999</option>
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+              </select>
+
+            </p>
+            <p>
+              Gender: Male<input type="radio" name="gender" class="male" checked="checked"/>&nbsp; Female<input
+              type="radio" name="gender" class="female"/>
+
+            </p>-->
+
+            <div class="inner-from">
+              <input type="button" ng-click="signUp(user)" name="sign-up" class="sign-up-btn" placeholder="Sign up" class="password"
+                     value="Sign Up"/>
+              <!-- <div class="login-btn"><a href="#" >Sign Up </a></div> -->
+            </div>
+            <p class="text-center">
+              <a href ng-click="showSignIn()">Have an Account? Click Here to Sign In</a>
+            </p>
+
+            <div class="loading">
+              <img class="loading-image" src="assets/images/loading.gif" alt="Loading..."/>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- social icons -->
+      <div class="social-icon">
+        <div class="row">
+          <div class="small-12 columns">
+            <p>Log in with</p>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<header>
+  <h2>Shops</h2>
+  <div>
+    <!-- {{tableParams}}
+     {{data}}
+     <table ng-table="tableParams1" class="table" show-filter="true">
+       <tr ng-repeat="shop in $data">
+         <td title="'shop Name'" filter="{ name: 'text'}" sortable="'shopName'">
+           {{shop.shopName}}</td>
+         <td title="'Address'" filter="{ age: 'number'}" sortable="'address'">
+           {{shop.address}}</td>
+       </tr>
+     </table>-->
+    <!--{{tableParams}} -->
+
+    <div>
+       <input  type="button" value = "Add New Shop" ng-click="addShopDetails();">
+       </div>
+      <br>
+    <div>
+    <table  class="table">
+      <th>Shop Name</th>
+      <th>Shop Address</th>
+      <tr ng-repeat="shop in tableParams">
+        <td title="'shop Name'" filter="{ name: 'text'}" sortable="'shopName'">
+          <a href="#/shop-details?shopId={{shop.shopId}}"> {{shop.shopName}}</a></td>
+        <td title="'Address'" filter="{ age: 'number'}" sortable="'address'">
+          {{shop.address}}</td>
+      </tr>
+    </table>
+  </div>
+  </div>
+</header>

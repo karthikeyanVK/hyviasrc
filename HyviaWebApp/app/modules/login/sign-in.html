@@ -1,0 +1,53 @@
+<!--<div style="width: 40%">
+  <div class="padding" >
+    <p><img src="http://www.oopsla.org/oopsla2008_final/images/icons/2008_logo-small.gif" style="padding-left: 70%"></p>
+  </div>
+  <div class="padding">
+    <button class="button button-light" ng-click="signInPage(user)">
+      Sign In
+    </button>
+    <button class="button button-stable" ng-click="signUpPage(user)">
+      Sign Up
+    </button>
+  </div>
+  <div class="padding">
+    <label ng-show="showErrormsg" class="assertive"> Invalid Credentials !!</label>
+  </div>
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input type="text" ng-model="user.emailId" placeholder="Email ID">
+    </label>
+    <br>
+    <label class="item item-input ">
+      <input  type="password" ng-model="user.password" placeholder="Password">
+    </label>
+  </div>
+  <div class="padding">
+    <p class="text-center">
+      <a href="#/forgot-password">Forgot password</a>
+    </p>
+  </div>
+</div>-->
+
+<div class="page-background">
+  <div class="login-card">
+    <h3>Register an account</h3>
+    <div class="padding">
+      <label ng-show="showErrormsg" class="assertive"> Invalid Credentials !!</label>
+    </div>
+    <input type="text"  ng-model="user.emailId" placeholder="Email ID">
+    <input  type="password" ng-model="user.password" placeholder="Password">
+    <div class="login-help">
+      <a href="#/forgot-password">Forgot password</a>
+    </div>
+    <button class="login login-submit" ng-click="signIn(user)">
+      Sign In
+    </button>
+
+    <div class="login login-help">
+      <button ng-click="signUpPage(user)">Please click here to Register</button>
+    </div>
+  </div>
+</div>
+
+

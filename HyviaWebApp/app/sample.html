@@ -1,0 +1,26 @@
+﻿<link rel="stylesheet" href="styles/stylesheet.css">
+<div class="page-background">
+<div class="login-card">
+    <h1>Hyvia</h1>
+
+  <div class="padding">
+    <label ng-show="showErrormsg" class="assertive"> Invalid Credentials !!</label>
+  </div>
+    <input type="text"  ng-model="user.emailId" placeholder="Email ID">
+    <input  type="password" ng-model="user.password" placeholder="Password">
+  <div class="login-help">
+    <a href="#/forgot-password">Forgot password</a>
+  </div>
+  <button class="login login-submit" ng-click="signInPage(user)">
+    Sign In
+  </button>
+
+  <div class="login-help">
+  <button ng-click="signUpPage(user)">Please click here to Register</button>
+  </div>
+</div>
+</div>
+
+
+
+

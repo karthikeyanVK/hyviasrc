@@ -1,0 +1,44 @@
+<h1>Product Details Page</h1>
+<div class="field-group">
+  <label for="text1" class="labelfield">Product Name:</label>
+
+  <div class="field">
+    <input name="text1" id="text1" type="text" value="" required ng-model="productDetails.productCommand.productName">
+  </div>
+</div>
+
+<div class="field-group">
+  <label for="text1" class="labelfield">Product Type ID:</label>
+
+  <div class="field">
+    <div class="field">
+      <select ng-model="productDetails.productCommand.productTypeId">
+        <option ng-repeat="option in productDetails.productTypes" value="{{option.productTypeId}}">
+          {{option.productTypeName}}
+        </option>
+      </select>
+    </div>
+
+  </div>
+</div>
+{{productDetails.productCommand.shopId}}
+<!--
+<div class="field-group">
+  <label for="text1" class="labelfield">Product ID:</label>
+
+  <div class="field">
+    <input name="text1" type="text" value="" required ng-model="productDetails.productCommand.productId">
+  </div>
+</div>
+<div class="field-group">
+  <label for="text1" class="labelfield">Shop ID:</label>
+
+  <div class="field">
+    <input name="text1" type="text" value="" required ng-model="productDetails.productCommand.shopId">
+  </div>
+</div>
+-->
+
+
+<input type="button" value="Save Product" ng-click="saveProductDetails(productDetails.productCommand.shopId)">
+
