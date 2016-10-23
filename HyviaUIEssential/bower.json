@@ -1,6 +1,6 @@
 {
   "name": "hyvia-ui-essential",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     {
       "name": "karthikeyanvk",
@@ -9,10 +9,13 @@
   ],
   "main": ["dist/hyvia-ui-essential.js"],
   "ignore": [
+    "**/.*",
     "src",
+    "node_modules",
     "test",
-    "Gruntfile.js",
-    "**/.*"
+    "gulpfile.js",
+    "karma*.*",
+    "bower"
   ],
   "dependencies": {
     "angular": "1.4.3",
